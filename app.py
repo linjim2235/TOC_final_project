@@ -7,7 +7,7 @@ from events.service import *
 from urllib.parse import parse_qsl
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://admin:123123000@localhost:5432/LineBot"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://admin:password@localhost:5432/LineBot"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # db.app=app
 db.init_app(app)
