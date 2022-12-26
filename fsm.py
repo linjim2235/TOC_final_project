@@ -33,27 +33,27 @@ class TocMachine(GraphMachine):
         print("Leaving state2")
 
 machine = TocMachine(
-    states=["user", "state1", "state2", "state3"],
+    states=["user", "introduction", "location", "else"],
     transitions=[
         {
             "trigger": "advance",
             "source": "user",
-            "dest": "state1",
-            "conditions": "is_going_to_state1",
+            "dest": "introduction",
+            "conditions": "is_going_to_introduction",
         },
         {
             "trigger": "advance",
             "source": "user",
-            "dest": "state2",
-            "conditions": "is_going_to_state2",
+            "dest": "location",
+            "conditions": "is_going_to_location",
         },
         {
             "trigger": "advance",
             "source": "user",
-            "dest": "state3",
-            "conditions": "is_going_to_state3",
+            "dest": "else",
+            "conditions": "is_going_to_else",
         },
-        {"trigger": "go_back", "source": ["state1", "state2", "state3"], "dest": "user"},
+        {"trigger": "go_back", "source": ["introduction", "location", "else"], "dest": "user"},
     ],
     initial="user",
     auto_transitions=False,
