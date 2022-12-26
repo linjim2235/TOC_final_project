@@ -16,8 +16,7 @@ def about_us_event(event):
     text_message = TextSendMessage(text="""$ 歡迎加入【成大餐廳】的官方帳號 $
             -您有以下功能可以使用-
             -@關於 會告訴您有哪些功能可以使用-
-            -@地址 會告訴您餐廳所在地-
-            -@地址 會告訴您餐廳所在地""", emojis=emoji)
+            -@地址 會告訴您餐廳所在地-""", emojis=emoji)
     sticker_message = StickerSendMessage(
         package_id='11538',
         sticker_id='51626494'
